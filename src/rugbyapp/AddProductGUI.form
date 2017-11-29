@@ -23,68 +23,69 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Component id="AddBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="91" max="32767" attributes="0"/>
-              <Component id="ViewBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
-                      <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ProductTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ProductNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="QuantityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="TeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CollarTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="GloveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="SleeveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="WeatherTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="StudTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="TypeComboBox" max="32767" attributes="0"/>
-                          <Component id="ProductNameTf" alignment="1" max="32767" attributes="0"/>
-                          <Component id="QuantityTf" alignment="1" max="32767" attributes="0"/>
-                          <Component id="PriceTf" max="32767" attributes="0"/>
-                          <Component id="SleeveComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CollarComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="GloveTypeComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="GloveMaterialComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="WeatherComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="StudComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="TeamTf" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="ProductTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ProductNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="QuantityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CollarTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="GloveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="SleeveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="WeatherTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="StudTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="TypeComboBox" max="32767" attributes="0"/>
+                                  <Component id="ProductNameTf" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="QuantityTf" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="PriceTf" max="32767" attributes="0"/>
+                                  <Component id="GloveTypeComboBox" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="TeamTf" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="SleeveComboBox" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="CollarComboBox" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="GloveMaterialComboBox" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="WeatherComboBox" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="StudComboBox" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="AddBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="ViewBtn" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
+                          <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="AddBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ViewBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -127,7 +128,7 @@
                   <Component id="GloveTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="GloveMaterialComboBox" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -141,9 +142,9 @@
                   <Component id="StudTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="StudComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace pref="40" max="32767" attributes="0"/>
               <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="26" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -237,10 +238,10 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+            <StringItem index="0" value="Long Sleeve"/>
+            <StringItem index="1" value="Short Sleeve"/>
+            <StringItem index="2" value="No Sleeve"/>
+            <StringItem index="3" value=" "/>
           </StringArray>
         </Property>
       </Properties>
@@ -251,11 +252,10 @@
     <Component class="javax.swing.JComboBox" name="CollarComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Round Collar"/>
+            <StringItem index="1" value="V-Neck Collar"/>
+            <StringItem index="2" value="Default Collar"/>
           </StringArray>
         </Property>
       </Properties>
@@ -266,11 +266,9 @@
     <Component class="javax.swing.JComboBox" name="GloveTypeComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="2">
+            <StringItem index="0" value="Fingerless Gloves"/>
+            <StringItem index="1" value="Full Gloves"/>
           </StringArray>
         </Property>
       </Properties>
@@ -286,14 +284,16 @@
     <Component class="javax.swing.JComboBox" name="GloveMaterialComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="3">
+            <StringItem index="0" value="Cotton"/>
+            <StringItem index="1" value="Leather"/>
+            <StringItem index="2" value="Linen"/>
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GloveMaterialComboBoxActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -306,11 +306,9 @@
     <Component class="javax.swing.JComboBox" name="WeatherComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="2">
+            <StringItem index="0" value="Dry Weather"/>
+            <StringItem index="1" value="Wet Weather"/>
           </StringArray>
         </Property>
       </Properties>
@@ -326,11 +324,9 @@
     <Component class="javax.swing.JComboBox" name="StudComboBox">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
+          <StringArray count="2">
+            <StringItem index="0" value="Metal Studs"/>
+            <StringItem index="1" value="Plastic Studs"/>
           </StringArray>
         </Property>
       </Properties>
