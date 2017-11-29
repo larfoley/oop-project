@@ -38,9 +38,38 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                      <Component id="ProductTypeLbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                      <Component id="TypeComboBox" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ProductTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="ProductNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="QuantityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="PriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="CollarTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="GloveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="SleeveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="WeatherTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="StudTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="TypeComboBox" max="32767" attributes="0"/>
+                          <Component id="ProductNameTf" alignment="1" max="32767" attributes="0"/>
+                          <Component id="QuantityTf" alignment="1" max="32767" attributes="0"/>
+                          <Component id="PriceTf" max="32767" attributes="0"/>
+                          <Component id="SleeveComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="CollarComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="GloveTypeComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="GloveMaterialComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="WeatherComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="StudComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="TeamTf" alignment="1" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -59,10 +88,62 @@
               <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="ProductTypeLbl" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ProductTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="167" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="ProductNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="ProductNameTf" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="QuantityLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="QuantityTf" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="PriceLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PriceTf" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="TeamTf" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="TeamLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="SleeveTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="SleeveComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="CollarTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="CollarComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="GloveTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="GloveTypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="GloveMaterialComboBox" alignment="1" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="WeatherTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="WeatherComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="StudTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="StudComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="26" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -86,7 +167,7 @@
         <Property name="text" type="java.lang.String" value="Add Product"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="ProductTypeLbl">
+    <Component class="javax.swing.JLabel" name="ProductTypeLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Product Type"/>
       </Properties>
@@ -105,6 +186,162 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="ProductNameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Product Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="ProductNameTf">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ProductNameTfActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="QuantityLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Quantity"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="QuantityTf">
+    </Component>
+    <Component class="javax.swing.JLabel" name="PriceLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Price"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="PriceTf">
+    </Component>
+    <Component class="javax.swing.JLabel" name="TeamLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Team"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="SleeveTypeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="SleeveType"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="CollarTypeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Collar Type"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="GloveTypeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Glove Type"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="TeamTf">
+    </Component>
+    <Component class="javax.swing.JComboBox" name="SleeveComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="CollarComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="GloveTypeComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="GloveMaterialLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Glove Material"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="GloveMaterialComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="WeatherTypeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Weather Type"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="WeatherComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="StudTypeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Stud Type"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="StudComboBox">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="AddProductBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Product"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
