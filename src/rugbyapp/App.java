@@ -9,17 +9,18 @@ package rugbyapp;
  *
  * @author x16103530
  */
-public class RugbyShop {
+
+
+public class App {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        // 
         
-        AddProductGUI gui = new AddProductGUI();
-                gui.setVisible(true);
+        // Render the login view
+        new ViewEngine().render("login");
+       
 
     }
     

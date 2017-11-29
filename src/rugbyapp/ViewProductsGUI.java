@@ -10,12 +10,17 @@ package rugbyapp;
  * @author James Ganley
  */
 public class ViewProductsGUI extends javax.swing.JFrame {
-
+    private ViewEngine view;
     /**
      * Creates new form ViewProductsGUI
      */
+    
     public ViewProductsGUI() {
+    }
+    
+    public ViewProductsGUI(ViewEngine view) {
         initComponents();
+        this.view = view;
     }
 
     /**
@@ -142,7 +147,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewProductsGUI().setVisible(true);
+//                new ViewProductsGUI().setVisible(true);
             }
         });
     }

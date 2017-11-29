@@ -15,10 +15,11 @@ import java.io.IOException;
  * @author blras
  */
 public class AddProductGUI extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form AddProductGUI
      */
+         private ViewEngine view;
          private int id;
          private String name;
          private double price;
@@ -32,8 +33,9 @@ public class AddProductGUI extends javax.swing.JFrame {
          private String studType;
          private ArrayList<Product> stock;
 
-    public AddProductGUI() {
+    public AddProductGUI(ViewEngine view) {
         initComponents();
+        this.view = view;
         id=0;
         name=this.name;
         price=0.0;
@@ -418,7 +420,7 @@ public class AddProductGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddProductGUI().setVisible(true);
+//                new AddProductGUI().setVisible(true);
             }
         });
     }
