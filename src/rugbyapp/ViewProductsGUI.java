@@ -1,19 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package rugbyapp;
+
+import java.io.*;
+import java.util.*;
 
 /**
  *
  * @author James Ganley
  */
 public class ViewProductsGUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form ViewProductsGUI
-     */
+    
     public ViewProductsGUI() {
         initComponents();
     }
@@ -131,11 +126,12 @@ public class ViewProductsGUI extends javax.swing.JFrame {
     private void viewProductsGetListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsGetListButtonActionPerformed
         // TODO add your handling code here:
         System.out.println(productsTypeComboBox.getSelectedItem());
+        
+        
     }//GEN-LAST:event_viewProductsGetListButtonActionPerformed
 
     private void ViewProductsPrintFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewProductsPrintFieldActionPerformed
         // TODO add your handling code here:
-        txtComboBoxItem.setText( itemText );
     }//GEN-LAST:event_ViewProductsPrintFieldActionPerformed
 
     /**
@@ -169,6 +165,21 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ViewProductsGUI().setVisible(true);
+                
+                 String[] myArr = new String[]{"a","b","c"};
+                    
+                // Read in dat file and
+                try{
+                    myArr = new myArray(new File("stock.dat"));
+                    System.out.println(myArr);
+                }
+                catch(Exception e){
+                    System.out.println(e.getMessage());
+                }
+                // Store data from dat file as an array of objects
+                
+                // for each object print the name of each object
+                // using the .getName() method
             }
         });
     }

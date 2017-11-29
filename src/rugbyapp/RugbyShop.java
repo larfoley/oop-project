@@ -16,9 +16,12 @@ public class RugbyShop {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        // 
+        
+      
         ViewProductsGUI myGUI = new ViewProductsGUI();
         myGUI.setVisible(true);
+        
+ 
     }
     
 }
