@@ -12,15 +12,11 @@ package rugbyapp;
 public class Boots extends Product{
     
     String studType;
-    String laceColour;
 
-    public Boots(String studType, String laceColour, int id, String name, double price, int quantity) {
+    public Boots(String studType, int id, String name, double price, int quantity) {
         super(id, name, price, quantity);
         this.studType = studType;
-        this.laceColour = laceColour;
     }
-
-    
 
     public String getStudType() {
         return studType;
@@ -30,17 +26,7 @@ public class Boots extends Product{
         this.studType = studType;
     }
 
-    public String getLaceColour() {
-        return laceColour;
-    }
-
-    public void setLaceColour(String laceColour) {
-        this.laceColour = laceColour;
-    }
-
-
- 
-    
+  
 
  
   
