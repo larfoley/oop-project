@@ -30,8 +30,29 @@ public class AddProductGUI extends javax.swing.JFrame {
         AddBtn = new javax.swing.JToggleButton();
         ViewBtn = new javax.swing.JToggleButton();
         AddProductLbl = new javax.swing.JLabel();
-        ProductTypeLbl = new javax.swing.JLabel();
+        ProductTypeLabel = new javax.swing.JLabel();
         TypeComboBox = new javax.swing.JComboBox<>();
+        ProductNameLabel = new javax.swing.JLabel();
+        ProductNameTf = new javax.swing.JTextField();
+        QuantityLabel = new javax.swing.JLabel();
+        QuantityTf = new javax.swing.JTextField();
+        PriceLabel = new javax.swing.JLabel();
+        PriceTf = new javax.swing.JTextField();
+        TeamLabel = new javax.swing.JLabel();
+        SleeveTypeLabel = new javax.swing.JLabel();
+        CollarTypeLabel = new javax.swing.JLabel();
+        GloveTypeLabel = new javax.swing.JLabel();
+        TeamTf = new javax.swing.JTextField();
+        SleeveComboBox = new javax.swing.JComboBox<>();
+        CollarComboBox = new javax.swing.JComboBox<>();
+        GloveTypeComboBox = new javax.swing.JComboBox<>();
+        GloveMaterialLabel = new javax.swing.JLabel();
+        GloveMaterialComboBox = new javax.swing.JComboBox<>();
+        WeatherTypeLabel = new javax.swing.JLabel();
+        WeatherComboBox = new javax.swing.JComboBox<>();
+        StudTypeLabel = new javax.swing.JLabel();
+        StudComboBox = new javax.swing.JComboBox<>();
+        AddProductBtn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,9 +63,49 @@ public class AddProductGUI extends javax.swing.JFrame {
         AddProductLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         AddProductLbl.setText("Add Product");
 
-        ProductTypeLbl.setText("Product Type");
+        ProductTypeLabel.setText("Product Type");
 
         TypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jersey", "Boots", "Gloves", " " }));
+
+        ProductNameLabel.setText("Product Name");
+
+        ProductNameTf.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ProductNameTfActionPerformed(evt);
+            }
+        });
+
+        QuantityLabel.setText("Quantity");
+
+        PriceLabel.setText("Price");
+
+        TeamLabel.setText("Team");
+
+        SleeveTypeLabel.setText("SleeveType");
+
+        CollarTypeLabel.setText("Collar Type");
+
+        GloveTypeLabel.setText("Glove Type");
+
+        SleeveComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        CollarComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        GloveTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        GloveMaterialLabel.setText("Glove Material");
+
+        GloveMaterialComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        WeatherTypeLabel.setText("Weather Type");
+
+        WeatherComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        StudTypeLabel.setText("Stud Type");
+
+        StudComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        AddProductBtn.setText("Add Product");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,9 +124,35 @@ public class AddProductGUI extends javax.swing.JFrame {
                         .addComponent(AddProductLbl))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addComponent(ProductTypeLbl)
-                        .addGap(81, 81, 81)
-                        .addComponent(TypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ProductTypeLabel)
+                            .addComponent(ProductNameLabel)
+                            .addComponent(QuantityLabel)
+                            .addComponent(PriceLabel)
+                            .addComponent(TeamLabel)
+                            .addComponent(CollarTypeLabel)
+                            .addComponent(GloveTypeLabel)
+                            .addComponent(SleeveTypeLabel)
+                            .addComponent(GloveMaterialLabel)
+                            .addComponent(WeatherTypeLabel)
+                            .addComponent(StudTypeLabel))
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(TypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ProductNameTf)
+                            .addComponent(QuantityTf)
+                            .addComponent(PriceTf)
+                            .addComponent(SleeveComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CollarComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(GloveTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(GloveMaterialComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WeatherComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(StudComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TeamTf)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(AddProductBtn)
+                        .addGap(23, 23, 23)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -79,13 +166,59 @@ public class AddProductGUI extends javax.swing.JFrame {
                 .addComponent(AddProductLbl)
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProductTypeLbl)
+                    .addComponent(ProductTypeLabel)
                     .addComponent(TypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(167, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ProductNameLabel)
+                    .addComponent(ProductNameTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(QuantityLabel)
+                    .addComponent(QuantityTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PriceLabel)
+                    .addComponent(PriceTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(TeamTf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TeamLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(SleeveTypeLabel)
+                    .addComponent(SleeveComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CollarTypeLabel)
+                    .addComponent(CollarComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GloveTypeLabel)
+                    .addComponent(GloveTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(GloveMaterialLabel)
+                    .addComponent(GloveMaterialComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WeatherTypeLabel)
+                    .addComponent(WeatherComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(StudTypeLabel)
+                    .addComponent(StudComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(AddProductBtn)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ProductNameTfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProductNameTfActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ProductNameTfActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,9 +257,30 @@ public class AddProductGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton AddBtn;
+    private javax.swing.JToggleButton AddProductBtn;
     private javax.swing.JLabel AddProductLbl;
-    private javax.swing.JLabel ProductTypeLbl;
+    private javax.swing.JComboBox<String> CollarComboBox;
+    private javax.swing.JLabel CollarTypeLabel;
+    private javax.swing.JComboBox<String> GloveMaterialComboBox;
+    private javax.swing.JLabel GloveMaterialLabel;
+    private javax.swing.JComboBox<String> GloveTypeComboBox;
+    private javax.swing.JLabel GloveTypeLabel;
+    private javax.swing.JLabel PriceLabel;
+    private javax.swing.JTextField PriceTf;
+    private javax.swing.JLabel ProductNameLabel;
+    private javax.swing.JTextField ProductNameTf;
+    private javax.swing.JLabel ProductTypeLabel;
+    private javax.swing.JLabel QuantityLabel;
+    private javax.swing.JTextField QuantityTf;
+    private javax.swing.JComboBox<String> SleeveComboBox;
+    private javax.swing.JLabel SleeveTypeLabel;
+    private javax.swing.JComboBox<String> StudComboBox;
+    private javax.swing.JLabel StudTypeLabel;
+    private javax.swing.JLabel TeamLabel;
+    private javax.swing.JTextField TeamTf;
     private javax.swing.JComboBox<String> TypeComboBox;
     private javax.swing.JToggleButton ViewBtn;
+    private javax.swing.JComboBox<String> WeatherComboBox;
+    private javax.swing.JLabel WeatherTypeLabel;
     // End of variables declaration//GEN-END:variables
 }
