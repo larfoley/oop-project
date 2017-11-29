@@ -33,6 +33,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         productsTypeLabel = new javax.swing.JLabel();
         productsTypeComboBox = new javax.swing.JComboBox<>();
         viewProductsGetListButton = new javax.swing.JButton();
+        ViewProductsPrintField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +51,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
         productsTypeLabel.setText("Products Type");
 
-        productsTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        productsTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Jersey", "Boots", "Gloves" }));
         productsTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productsTypeComboBoxActionPerformed(evt);
@@ -58,6 +59,17 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         });
 
         viewProductsGetListButton.setText("View Products");
+        viewProductsGetListButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewProductsGetListButtonActionPerformed(evt);
+            }
+        });
+
+        ViewProductsPrintField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewProductsPrintFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -66,21 +78,23 @@ public class ViewProductsGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(addProductsChangePageButton)
-                        .addGap(78, 78, 78)
-                        .addComponent(viewProductsChangePageButton))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(productsTypeLabel)
-                            .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(productsTypeLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addComponent(viewProductsLabel))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(viewProductsGetListButton)))
+                        .addGap(68, 68, 68)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(addProductsChangePageButton)
+                                .addGap(78, 78, 78)
+                                .addComponent(viewProductsChangePageButton))
+                            .addComponent(ViewProductsPrintField, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(123, 123, 123)
+                        .addComponent(viewProductsGetListButton, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -96,9 +110,11 @@ public class ViewProductsGUI extends javax.swing.JFrame {
                 .addComponent(productsTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(viewProductsGetListButton)
-                .addContainerGap(405, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(viewProductsGetListButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ViewProductsPrintField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,6 +127,16 @@ public class ViewProductsGUI extends javax.swing.JFrame {
     private void addProductsChangePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductsChangePageButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_addProductsChangePageButtonActionPerformed
+
+    private void viewProductsGetListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsGetListButtonActionPerformed
+        // TODO add your handling code here:
+        System.out.println(productsTypeComboBox.getSelectedItem());
+    }//GEN-LAST:event_viewProductsGetListButtonActionPerformed
+
+    private void ViewProductsPrintFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewProductsPrintFieldActionPerformed
+        // TODO add your handling code here:
+        txtComboBoxItem.setText( itemText );
+    }//GEN-LAST:event_ViewProductsPrintFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,6 +174,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ViewProductsPrintField;
     private javax.swing.JButton addProductsChangePageButton;
     private javax.swing.JComboBox<String> productsTypeComboBox;
     private javax.swing.JLabel productsTypeLabel;
