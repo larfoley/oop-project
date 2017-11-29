@@ -5,11 +5,13 @@
  */
 package rugbyapp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author x16103530
  */
-public class Boots extends Product{
+public class Boots extends Product implements Serializable{
     
     String studType;
 

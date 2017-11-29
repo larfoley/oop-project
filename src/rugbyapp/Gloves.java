@@ -5,11 +5,13 @@
  */
 package rugbyapp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author x16103530
  */
-public class Gloves extends Product {
+public class Gloves extends Product implements Serializable{
     String gloveType;
     String material;
     String weather;
