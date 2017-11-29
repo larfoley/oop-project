@@ -14,12 +14,13 @@ public class Jersey extends Product{
     String sleeveType;
     String collarType;
 
-    public Jersey(String team, String sleeveType, String collarType, int id, String name, double price, String size, int quantity, String colour, String details, String brand, String imageUrl) {
-        super(id, name, price, size, quantity, colour, details, brand, imageUrl);
+    public Jersey(String team, String sleeveType, String collarType, int id, String name, double price, int quantity) {
+        super(id, name, price, quantity);
         this.team = team;
         this.sleeveType = sleeveType;
         this.collarType = collarType;
     }
+
 
    
 

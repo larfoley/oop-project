@@ -17,20 +17,7 @@ public class RugbyShop {
     public static void main(String[] args) {
         // TODO code application logic here
         // 
-        Boots p = new Boots(
-                "Metals",
-                "Green",
-                10,
-                "Neon",
-                9.99,
-                "8",
-                2,
-                "neon",
-                "amazing glow in the dark boots made of admanatie",
-                "Puma",
-                "foo.jpg"
-        );
-        System.out.println(p.getLaceColour());
+
     }
     
 }

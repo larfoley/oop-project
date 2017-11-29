@@ -14,11 +14,13 @@ public class Boots extends Product{
     String studType;
     String laceColour;
 
-    public Boots(String studType, String laceColour, int id, String name, double price, String size, int quantity, String colour, String details, String brand, String imageUrl) {
-        super(id, name, price, size, quantity, colour, details, brand, imageUrl);
+    public Boots(String studType, String laceColour, int id, String name, double price, int quantity) {
+        super(id, name, price, quantity);
         this.studType = studType;
         this.laceColour = laceColour;
     }
+
+    
 
     public String getStudType() {
         return studType;

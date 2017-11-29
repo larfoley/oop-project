@@ -13,13 +13,14 @@ public class Gloves extends Product {
     String gloveType;
     String material;
     String weather;
-  
-    public Gloves(String gloveType, String material, String weather, int id, String name, double price, String size, int quantity, String colour, String details, String brand, String imageUrl) {
-        super(id, name, price, size, quantity, colour, details, brand, imageUrl);
+
+    public Gloves(String gloveType, String material, String weather, int id, String name, double price, int quantity) {
+        super(id, name, price, quantity);
         this.gloveType = gloveType;
         this.material = material;
         this.weather = weather;
     }
+  
 
     public String getGloveType() {
         return gloveType;
