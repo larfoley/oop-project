@@ -36,12 +36,23 @@ public class StockFile implements Serializable {
         }
     }
     
+//     ArrayList products = StockFile.read();
+    
+//     proudcs.add(p);
+    
+//     StockFile.write();
+    
+//     Object o = products.get(0);
+//     Product p = (Product)o;
+    
     public static ArrayList read() {
         try {
             File file = new File("stock.dat");
             FileInputStream fStream = new FileInputStream(file);
             ObjectInputStream iStream = new ObjectInputStream(fStream);
-            System.out.println(iStream);
+            // iStream.close();
+//             return (ArrayList)iStream.readObject();
+            
        
         } catch (IOException e) {
             System.out.println("error");
