@@ -10,7 +10,7 @@ package rugbyapp;
  * @author James Ganley
  */
 public class ViewProductsGUI extends javax.swing.JFrame {
-    private ViewEngine view;
+    private Views view;
     /**
      * Creates new form ViewProductsGUI
      */
@@ -18,7 +18,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
     public ViewProductsGUI() {
     }
     
-    public ViewProductsGUI(ViewEngine view) {
+    public ViewProductsGUI(Views view) {
         initComponents();
         this.view = view;
     }

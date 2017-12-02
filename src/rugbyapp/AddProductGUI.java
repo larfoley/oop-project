@@ -6,10 +6,7 @@
 package rugbyapp;
 
 import java.util.ArrayList;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-import java.io.IOException;
+
 /**
  *
  * @author blras
@@ -19,35 +16,13 @@ public class AddProductGUI extends javax.swing.JFrame {
     /**
      * Creates new form AddProductGUI
      */
-         private ViewEngine view;
-         private int id;
-         private String name;
-         private double price;
-         private int quantity;
-         private String team;
-         private String sleeveType;
-         private String collarType;
-         private String gloveType;
-         private String material;
-         private String weather;
-         private String studType;
+         private Views view;
+         
          private ArrayList<Product> stock;
 
-    public AddProductGUI(ViewEngine view) {
+    public AddProductGUI(Views view) {
         initComponents();
         this.view = view;
-        id=0;
-        name=this.name;
-        price=0.0;
-        quantity=0;
-        team=this.team;
-        sleeveType=this.sleeveType;
-        collarType=this.collarType;
-        gloveType=this.gloveType;
-        material=this.material;
-        weather=this.weather;
-        studType=this.studType;
-        stock =new ArrayList<>();
     }
 
     /**
@@ -91,6 +66,11 @@ public class AddProductGUI extends javax.swing.JFrame {
         AddBtn.setText("Add Product");
 
         ViewBtn.setText("View Product");
+        ViewBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewBtnActionPerformed(evt);
+            }
+        });
 
         AddProductLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         AddProductLbl.setText("Add Product");
@@ -286,40 +266,38 @@ public class AddProductGUI extends javax.swing.JFrame {
 
     private void AddProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddProductBtnActionPerformed
         // TODO add your handling code here:
+        Stock stock = new Stock();
         Product product;
-        id++;
-        name=ProductNameTf.getText();
-        price=Double.parseDouble(PriceTf.getText());
-        quantity=Integer.parseInt(QuantityTf.getText());
-        team=TeamTf.getText();
-        sleeveType=(String)SleeveComboBox.getSelectedItem();
-        collarType=(String)CollarComboBox.getSelectedItem();
-        gloveType=(String)GloveTypeComboBox.getSelectedItem();
-        material=(String)GloveMaterialComboBox.getSelectedItem();
-        weather=(String)WeatherComboBox.getSelectedItem();
-        studType=(String)StudComboBox.getSelectedItem();
+        
+        int quantity=Integer.parseInt(QuantityTf.getText());
+        String name = ProductNameTf.getText();
+        double price = Double.parseDouble(PriceTf.getText());
+        String team = TeamTf.getText();
+        String sleeveType = (String)SleeveComboBox.getSelectedItem();
+        String collarType = (String)CollarComboBox.getSelectedItem();
+        String gloveType = (String)GloveTypeComboBox.getSelectedItem();
+        String material = (String)GloveMaterialComboBox.getSelectedItem();
+        String weather = (String)WeatherComboBox.getSelectedItem();
+        String studType = (String)StudComboBox.getSelectedItem();
+
         if(TypeComboBox.getSelectedItem().equals("Jersey")) {
-        product = new Jersey(team,sleeveType,collarType,id,name,price,quantity);
-        stock.add(product);
-        }
-        if(TypeComboBox.getSelectedItem().equals("Gloves")) {
-        product = new Gloves(gloveType,material,weather,id,name,price,quantity);
-        stock.add(product);
+            product = new Jersey(name, price, team, sleeveType, collarType);
+  
+        } else if(TypeComboBox.getSelectedItem().equals("Gloves")) {
+            product = new Gloves(name, price, gloveType, material, weather);
+
         }
         else {
-        product = new Boots(studType,id,name,price,quantity);
-        stock.add(product);
+            product = new Boots(name, price, studType);
+          
         }
-        try {
-            File f = new File("stock.dat");
-            FileOutputStream fStream = new FileOutputStream(f);
-            ObjectOutputStream oStream = new ObjectOutputStream(fStream);
-
-            oStream.writeObject(stock);
-            oStream.close();
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
+        
+        stock.addProduct(product);
+        
+        DialogBox.alert("Product Added");
+        
+        
+        
     }//GEN-LAST:event_AddProductBtnActionPerformed
 
     private void TypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeComboBoxActionPerformed
@@ -389,6 +367,10 @@ public class AddProductGUI extends javax.swing.JFrame {
          
         
     }//GEN-LAST:event_TypeComboBoxItemStateChanged
+
+    private void ViewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ViewBtnActionPerformed
 
     /**
      * @param args the command line arguments

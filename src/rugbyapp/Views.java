@@ -9,14 +9,14 @@ package rugbyapp;
  *
  * @author x15047911
  */
-public class ViewEngine {
+public class Views {
     
     // Views
     LoginGUI loginGUI = new LoginGUI(this);
     AddProductGUI addProductGUI = new AddProductGUI(this);
     ViewProductsGUI viewProductsGUI = new ViewProductsGUI(this);
     
-    public ViewEngine() {
+    public Views() {
         loginGUI.setVisible(false);
         addProductGUI.setVisible(false);
         viewProductsGUI.setVisible(false);
@@ -50,3 +50,5 @@ public class ViewEngine {
     
     
 }
+
+

@@ -5,6 +5,8 @@
  */
 package rugbyapp;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author x16103530
@@ -19,7 +21,8 @@ public class App {
     public static void main(String[] args) {
         
         // Render the login view
-        new ViewEngine().render("login");
+         new Views().render("login");
+        
        
 
     }

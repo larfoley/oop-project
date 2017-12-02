@@ -15,14 +15,20 @@ public class Gloves extends Product implements Serializable{
     String gloveType;
     String material;
     String weather;
+    
+    public Gloves() {
+        super();
+        this.gloveType = "";
+        this.material = "";
+        this.weather = "";
+    }
 
-    public Gloves(String gloveType, String material, String weather, int id, String name, double price, int quantity) {
-        super(id, name, price, quantity);
+    public Gloves(String name, double price, String gloveType, String material, String weather) {
+        super(name, price);
         this.gloveType = gloveType;
         this.material = material;
         this.weather = weather;
     }
-  
 
     public String getGloveType() {
         return gloveType;

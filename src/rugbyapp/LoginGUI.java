@@ -10,11 +10,11 @@ package rugbyapp;
  * @author x15047911
  */
 public class LoginGUI extends javax.swing.JFrame {
-    private ViewEngine view;
+    private Views view;
     /**
      * Creates new form LoginGUI
      */
-    public LoginGUI(ViewEngine view) {
+    public LoginGUI(Views view) {
         this.view = view;
         initComponents();
     }
@@ -36,6 +36,8 @@ public class LoginGUI extends javax.swing.JFrame {
         loginButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 153, 153));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("Login");
