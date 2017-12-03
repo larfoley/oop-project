@@ -1,16 +1,28 @@
 package rugbyapp;
 
 import java.io.*;
-import java.util.*;
+import javax.swing.JOptionPane;
+import static javax.swing.text.html.HTML.Tag.HEAD;
 
 /**
  *
  * @author James Ganley
  */
 public class ViewProductsGUI extends javax.swing.JFrame {
+<<<<<<< HEAD
+=======
+    private Views view;
+    /**
+     * Creates new form ViewProductsGUI
+     */
+>>>>>>> 24467039c65b7b949d5d204863e29df40aeff76b
     
     public ViewProductsGUI() {
+    }
+    
+    public ViewProductsGUI(Views view) {
         initComponents();
+        this.view = view;
     }
 
     /**
@@ -121,12 +133,34 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
     private void addProductsChangePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductsChangePageButtonActionPerformed
         // TODO add your handling code here:
+        view.render("addProduct");
     }//GEN-LAST:event_addProductsChangePageButtonActionPerformed
 
     private void viewProductsGetListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsGetListButtonActionPerformed
         // TODO add your handling code here:
-        System.out.println(productsTypeComboBox.getSelectedItem());
+        File inFile;
+        FileInputStream fStream;
+        objectInputStream oStream;
         
+        try{
+            inFile = new ("stock.dat");
+            fStream = new FileInputStream(inFile);
+            oStream = new objectInputStream(fStream);
+            
+            Assessment x;
+            x = (Assessment)oStream.readObject();
+            
+            JOptionPane.showMessageDialog(null,"ID: "+x.getId()+"Name: "+x.getName+"Price: "+x.getPrice+"Quantity: "+x.getQuantity);
+            
+            oStream.close();
+        
+        }
+        catch(IOException e){
+            System.out.println(e);
+        }
+        catch(ClassNotFoundException ex){
+            System.out.println(ex);
+        }
         
     }//GEN-LAST:event_viewProductsGetListButtonActionPerformed
 
@@ -164,6 +198,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+<<<<<<< HEAD
                 new ViewProductsGUI().setVisible(true);
                 
                  String[] myArr = new String[]{"a","b","c"};
@@ -180,6 +215,9 @@ public class ViewProductsGUI extends javax.swing.JFrame {
                 
                 // for each object print the name of each object
                 // using the .getName() method
+=======
+//                new ViewProductsGUI().setVisible(true);
+>>>>>>> 24467039c65b7b949d5d204863e29df40aeff76b
             }
         });
     }

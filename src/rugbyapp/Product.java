@@ -4,22 +4,38 @@
  * and open the template in the editor.
  */
 package rugbyapp;
+import java.io.Serializable;
 
 /**
  *
  * @author x16103530
  */
-public class Product {
+public class Product implements Serializable {
     protected int id;
     protected String name;
     protected double price;
     protected int quantity;
+    
+    public Product() {
+        id = 100;
+        quantity = 1;
+        name = "";
+        price = 0.0;
+    }
 
-    public Product(int id, String name, double price, int quantity) {
-        this.id = id;
+    public Product(String name, double price) {
+        id = 100;
+        quantity = 1;
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
+    }
+    
+    public void increaseQuantity() {
+        this.quantity++;
+    }
+    
+    public void decreaseQuantity() {
+        this.quantity = this.quantity == 0 ? this.quantity-- : this.quantity;
     }
 
     public int getId() {
@@ -47,7 +63,7 @@ public class Product {
     }
 
     public int getQuantity() {
-        return quantity;
+        return this.quantity;
     }
 
     public void setQuantity(int quantity) {

@@ -5,26 +5,31 @@
  */
 package rugbyapp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author x16103530
  */
-public class Jersey extends Product{
-    String team;
-    String sleeveType;
-    String collarType;
+public class Jersey extends Product implements Serializable{
+    protected String team;
+    protected String sleeveType;
+    protected String collarType;
+    
+    public Jersey() {
+        super();
+        this.team = "";
+        this.sleeveType = "";
+        this.collarType = "";
+    }
 
-    public Jersey(String team, String sleeveType, String collarType, int id, String name, double price, int quantity) {
-        super(id, name, price, quantity);
+    public Jersey(String name, double price, String team, String sleeveType, String collarType) {
+        super(name, price);
         this.team = team;
         this.sleeveType = sleeveType;
         this.collarType = collarType;
     }
-
-
    
-
-  
 
     public String getTeam() {
         return team;
@@ -49,11 +54,5 @@ public class Jersey extends Product{
     public void setCollarType(String collarType) {
         this.collarType = collarType;
     }
-
-
-   
-
-   
-   
     
 }

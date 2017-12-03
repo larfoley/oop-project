@@ -5,16 +5,23 @@
  */
 package rugbyapp;
 
+import java.io.Serializable;
+
 /**
  *
  * @author x16103530
  */
-public class Boots extends Product{
+public class Boots extends Product implements Serializable {
     
-    String studType;
+    protected String studType;
+    
+    public Boots() {
+        super();
+        this.studType = "";
+    }
 
-    public Boots(String studType, int id, String name, double price, int quantity) {
-        super(id, name, price, quantity);
+    public Boots(String name, double price, String studType) {
+        super(name, price);
         this.studType = studType;
     }
 

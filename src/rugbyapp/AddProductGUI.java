@@ -5,17 +5,45 @@
  */
 package rugbyapp;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author blras
  */
 public class AddProductGUI extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form AddProductGUI
      */
-    public AddProductGUI() {
+         private Views view;
+         
+         private ArrayList<Product> stock;
+
+    public AddProductGUI(Views view) {
         initComponents();
+        this.view = view;
+        TeamLabel.setVisible(false);  
+        SleeveTypeLabel.setVisible(false);  
+        CollarTypeLabel.setVisible(false);  
+        GloveTypeLabel.setVisible(false);  
+        TeamTf.setVisible(false);  
+        SleeveComboBox.setVisible(false);  
+        CollarComboBox.setVisible(false);  
+        GloveTypeComboBox.setVisible(false);  
+        GloveMaterialLabel.setVisible(false);  
+        GloveMaterialComboBox.setVisible(false);  
+        WeatherTypeLabel.setVisible(false);  
+        WeatherComboBox.setVisible(false);  
+        StudTypeLabel.setVisible(false);  
+        StudComboBox.setVisible(false);
+        AddProductBtn.setVisible(false);
+        PriceLabel.setVisible(false);
+        PriceTf.setVisible(false);
+        ProductNameLabel.setVisible(false);
+        ProductNameTf.setVisible(false);
+        QuantityLabel.setVisible(false);
+        QuantityTf.setVisible(false);
     }
 
     /**
@@ -59,13 +87,28 @@ public class AddProductGUI extends javax.swing.JFrame {
         AddBtn.setText("Add Product");
 
         ViewBtn.setText("View Product");
+        ViewBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewBtnActionPerformed(evt);
+            }
+        });
 
         AddProductLbl.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         AddProductLbl.setText("Add Product");
 
         ProductTypeLabel.setText("Product Type");
 
-        TypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Jersey", "Boots", "Gloves", " " }));
+        TypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Type", "Jersey", "Boots", "Gloves" }));
+        TypeComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                TypeComboBoxItemStateChanged(evt);
+            }
+        });
+        TypeComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TypeComboBoxActionPerformed(evt);
+            }
+        });
 
         ProductNameLabel.setText("Product Name");
 
@@ -88,6 +131,11 @@ public class AddProductGUI extends javax.swing.JFrame {
         GloveTypeLabel.setText("Glove Type");
 
         SleeveComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Long Sleeve", "Short Sleeve", "No Sleeve", " " }));
+        SleeveComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SleeveComboBoxActionPerformed(evt);
+            }
+        });
 
         CollarComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Round Collar", "V-Neck Collar", "Default Collar" }));
 
@@ -111,6 +159,11 @@ public class AddProductGUI extends javax.swing.JFrame {
         StudComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Metal Studs", "Plastic Studs" }));
 
         AddProductBtn.setText("Add Product");
+        AddProductBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddProductBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -228,6 +281,141 @@ public class AddProductGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GloveMaterialComboBoxActionPerformed
 
+    private void SleeveComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SleeveComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SleeveComboBoxActionPerformed
+
+    private void AddProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddProductBtnActionPerformed
+        // TODO add your handling code here:
+        Stock stock = new Stock();
+        Product product;
+        
+        int quantity=Integer.parseInt(QuantityTf.getText());
+        String name = ProductNameTf.getText();
+        double price = Double.parseDouble(PriceTf.getText());
+        String team = TeamTf.getText();
+        String sleeveType = (String)SleeveComboBox.getSelectedItem();
+        String collarType = (String)CollarComboBox.getSelectedItem();
+        String gloveType = (String)GloveTypeComboBox.getSelectedItem();
+        String material = (String)GloveMaterialComboBox.getSelectedItem();
+        String weather = (String)WeatherComboBox.getSelectedItem();
+        String studType = (String)StudComboBox.getSelectedItem();
+
+        if(TypeComboBox.getSelectedItem().equals("Jersey")) {
+            product = new Jersey(name, price, team, sleeveType, collarType);
+  
+        } else if(TypeComboBox.getSelectedItem().equals("Gloves")) {
+            product = new Gloves(name, price, gloveType, material, weather);
+
+        }
+        else {
+            product = new Boots(name, price, studType);
+          
+        }
+        
+        stock.addProduct(product);
+        
+        DialogBox.alert("Product Added");
+        
+        
+        
+    }//GEN-LAST:event_AddProductBtnActionPerformed
+
+    private void TypeComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TypeComboBoxActionPerformed
+
+    private void TypeComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_TypeComboBoxItemStateChanged
+        // TODO add tyour handling code here:
+        if (evt.getStateChange() == 2){
+            
+            String  selectedvalue = "";
+            selectedvalue=(String)TypeComboBox.getSelectedItem();
+            
+            if(selectedvalue.equals("Jersey")) {
+                
+  
+        TeamLabel.setVisible(true);  
+        SleeveTypeLabel.setVisible(true);  
+        CollarTypeLabel.setVisible(true);  
+        GloveTypeLabel.setVisible(false);  
+        TeamTf.setVisible(true);  
+        SleeveComboBox.setVisible(true);  
+        CollarComboBox.setVisible(true);  
+        GloveTypeComboBox.setVisible(false);  
+        GloveMaterialLabel.setVisible(false);  
+        GloveMaterialComboBox.setVisible(false);  
+        WeatherTypeLabel.setVisible(false);  
+        WeatherComboBox.setVisible(false);  
+        StudTypeLabel.setVisible(false);  
+        StudComboBox.setVisible(false); 
+        PriceLabel.setVisible(true);
+        PriceTf.setVisible(true);
+        ProductNameLabel.setVisible(true);
+        ProductNameTf.setVisible(true);
+        QuantityLabel.setVisible(true);
+        QuantityTf.setVisible(true);
+        AddProductBtn.setVisible(true);
+       
+        } else if(selectedvalue.equals("Boots")) {
+                
+              TeamLabel.setVisible(false);  
+        SleeveTypeLabel.setVisible(false);  
+        CollarTypeLabel.setVisible(false);  
+        GloveTypeLabel.setVisible(false);  
+        TeamTf.setVisible(false);  
+        SleeveComboBox.setVisible(false);  
+        CollarComboBox.setVisible(false);  
+        GloveTypeComboBox.setVisible(false);  
+        GloveMaterialLabel.setVisible(false);  
+        GloveMaterialComboBox.setVisible(false);  
+        WeatherTypeLabel.setVisible(false);  
+        WeatherComboBox.setVisible(false);  
+        StudTypeLabel.setVisible(true);  
+        StudComboBox.setVisible(true);
+        PriceLabel.setVisible(true);
+        PriceTf.setVisible(true);
+        ProductNameLabel.setVisible(true);
+        ProductNameTf.setVisible(true);
+        QuantityLabel.setVisible(true);
+        QuantityTf.setVisible(true);
+        AddProductBtn.setVisible(true);
+        
+        }else {
+                    TeamLabel.setVisible(false);  
+        SleeveTypeLabel.setVisible(false);  
+        CollarTypeLabel.setVisible(false);  
+        GloveTypeLabel.setVisible(true);  
+        TeamTf.setVisible(false);  
+        SleeveComboBox.setVisible(false);  
+        CollarComboBox.setVisible(false);  
+        GloveTypeComboBox.setVisible(true);  
+        GloveMaterialLabel.setVisible(true);  
+        GloveMaterialComboBox.setVisible(true);  
+        WeatherTypeLabel.setVisible(true);  
+        WeatherComboBox.setVisible(true);  
+        StudTypeLabel.setVisible(false);  
+        StudComboBox.setVisible(false);
+        PriceLabel.setVisible(true);
+        PriceTf.setVisible(true);
+        ProductNameLabel.setVisible(true);
+        ProductNameTf.setVisible(true);
+        QuantityLabel.setVisible(true);
+        QuantityTf.setVisible(true);
+        AddProductBtn.setVisible(true);
+        }
+        }
+        
+
+         
+        
+    }//GEN-LAST:event_TypeComboBoxItemStateChanged
+
+    private void ViewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBtnActionPerformed
+        // TODO add your handling code here:
+        view.render("viewProduct");
+    }//GEN-LAST:event_ViewBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,7 +446,7 @@ public class AddProductGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AddProductGUI().setVisible(true);
+//                new AddProductGUI().setVisible(true);
             }
         });
     }
