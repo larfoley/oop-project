@@ -23,6 +23,27 @@ public class AddProductGUI extends javax.swing.JFrame {
     public AddProductGUI(Views view) {
         initComponents();
         this.view = view;
+        TeamLabel.setVisible(false);  
+        SleeveTypeLabel.setVisible(false);  
+        CollarTypeLabel.setVisible(false);  
+        GloveTypeLabel.setVisible(false);  
+        TeamTf.setVisible(false);  
+        SleeveComboBox.setVisible(false);  
+        CollarComboBox.setVisible(false);  
+        GloveTypeComboBox.setVisible(false);  
+        GloveMaterialLabel.setVisible(false);  
+        GloveMaterialComboBox.setVisible(false);  
+        WeatherTypeLabel.setVisible(false);  
+        WeatherComboBox.setVisible(false);  
+        StudTypeLabel.setVisible(false);  
+        StudComboBox.setVisible(false);
+        AddProductBtn.setVisible(false);
+        PriceLabel.setVisible(false);
+        PriceTf.setVisible(false);
+        ProductNameLabel.setVisible(false);
+        ProductNameTf.setVisible(false);
+        QuantityLabel.setVisible(false);
+        QuantityTf.setVisible(false);
     }
 
     /**
@@ -77,7 +98,7 @@ public class AddProductGUI extends javax.swing.JFrame {
 
         ProductTypeLabel.setText("Product Type");
 
-        TypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Type", "Jersey", "Boots", "Gloves", " " }));
+        TypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Type", "Jersey", "Boots", "Gloves" }));
         TypeComboBox.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 TypeComboBoxItemStateChanged(evt);
@@ -327,7 +348,14 @@ public class AddProductGUI extends javax.swing.JFrame {
         WeatherTypeLabel.setVisible(false);  
         WeatherComboBox.setVisible(false);  
         StudTypeLabel.setVisible(false);  
-        StudComboBox.setVisible(false);  
+        StudComboBox.setVisible(false); 
+        PriceLabel.setVisible(true);
+        PriceTf.setVisible(true);
+        ProductNameLabel.setVisible(true);
+        ProductNameTf.setVisible(true);
+        QuantityLabel.setVisible(true);
+        QuantityTf.setVisible(true);
+        AddProductBtn.setVisible(true);
        
         } else if(selectedvalue.equals("Boots")) {
                 
@@ -345,6 +373,14 @@ public class AddProductGUI extends javax.swing.JFrame {
         WeatherComboBox.setVisible(false);  
         StudTypeLabel.setVisible(true);  
         StudComboBox.setVisible(true);
+        PriceLabel.setVisible(true);
+        PriceTf.setVisible(true);
+        ProductNameLabel.setVisible(true);
+        ProductNameTf.setVisible(true);
+        QuantityLabel.setVisible(true);
+        QuantityTf.setVisible(true);
+        AddProductBtn.setVisible(true);
+        
         }else {
                     TeamLabel.setVisible(false);  
         SleeveTypeLabel.setVisible(false);  
@@ -359,7 +395,14 @@ public class AddProductGUI extends javax.swing.JFrame {
         WeatherTypeLabel.setVisible(true);  
         WeatherComboBox.setVisible(true);  
         StudTypeLabel.setVisible(false);  
-        StudComboBox.setVisible(false); 
+        StudComboBox.setVisible(false);
+        PriceLabel.setVisible(true);
+        PriceTf.setVisible(true);
+        ProductNameLabel.setVisible(true);
+        ProductNameTf.setVisible(true);
+        QuantityLabel.setVisible(true);
+        QuantityTf.setVisible(true);
+        AddProductBtn.setVisible(true);
         }
         }
         
@@ -370,6 +413,7 @@ public class AddProductGUI extends javax.swing.JFrame {
 
     private void ViewBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewBtnActionPerformed
         // TODO add your handling code here:
+        view.render("viewProduct");
     }//GEN-LAST:event_ViewBtnActionPerformed
 
     /**
