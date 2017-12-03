@@ -115,6 +115,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
     private void addProductsChangePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addProductsChangePageButtonActionPerformed
         // TODO add your handling code here:
+        view.render("addProduct");
     }//GEN-LAST:event_addProductsChangePageButtonActionPerformed
 
     /**
