@@ -40,6 +40,8 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         productsTypeLabel = new javax.swing.JLabel();
         productsTypeComboBox = new javax.swing.JComboBox<>();
         viewProductsGetListButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        textPaneAsh = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -71,6 +73,8 @@ public class ViewProductsGUI extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane2.setViewportView(textPaneAsh);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -78,22 +82,26 @@ public class ViewProductsGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addComponent(addProductsChangePageButton)
-                        .addGap(78, 78, 78)
-                        .addComponent(viewProductsChangePageButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(productsTypeLabel)
-                            .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(185, 185, 185)
                         .addComponent(viewProductsLabel))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(98, 98, 98)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(productsTypeLabel)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(75, 75, 75)
+                                    .addComponent(viewProductsGetListButton))
+                                .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(68, 68, 68)
+                            .addComponent(addProductsChangePageButton)
+                            .addGap(78, 78, 78)
+                            .addComponent(viewProductsChangePageButton)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(viewProductsGetListButton)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                        .addGap(68, 68, 68)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,9 +116,11 @@ public class ViewProductsGUI extends javax.swing.JFrame {
                 .addComponent(productsTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(11, 11, 11)
                 .addComponent(viewProductsGetListButton)
-                .addContainerGap(405, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,33 +171,40 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         if(productType.equals("All")) {
             
             for (int i = 0; i < jerseys.size(); i++) {
-                output += jerseys.get(i).getInfo() + "\n";
+                output += jerseys.get(i).getInfo() + "\n\n\n";
+                
+
             }
             
-            for (int i = 0; i < products.size(); i++) {
-                output += boots.get(i).getInfo() + "\n";
+            for (int i = 0; i < boots.size(); i++) {
+                output += boots.get(i).getInfo() + "\n\n\n";
             }
             
-            for (int i = 0; i < products.size(); i++) {
-                output += gloves.get(i).getInfo() + "\n";
+            for (int i = 0; i < gloves.size(); i++) {
+                output += gloves.get(i).getInfo() + "\n\n\n";
             }
            
         } else if(productType.equals("Jerseys")) {
-            for (int i = 0; i < products.size(); i++) {
-                output += jerseys.get(i).getInfo() + "\n";
+            for (int i = 0; i < jerseys.size(); i++) {
+                output += jerseys.get(i).getInfo() + "\n\n\n";
             }
         }
         else if(productType.equals("Boots")){
-            for (int i = 0; i < products.size(); i++) {
-                output += boots.get(i).getInfo() + "\n";
+            for (int i = 0; i < boots.size(); i++) {
+                output += boots.get(i).getInfo() + "\n\n\n";
             }
         } else {
-            for (int i = 0; i < products.size(); i++) {
-                output += gloves.get(i).getInfo() + "\n";
+            for (int i = 0; i < gloves.size(); i++) {
+                output += gloves.get(i).getInfo() + "\n\n\n";
             }
         }
         
-        System.out.printf(output);
+        // get textBox
+        // set contents of text box to output
+        textPaneAsh.setText("");
+        textPaneAsh.setText(output + "\n"); 
+
+        
     }//GEN-LAST:event_viewProductsGetListButtonActionPerformed
 
     /**
@@ -231,8 +248,10 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addProductsChangePageButton;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JComboBox<String> productsTypeComboBox;
     private javax.swing.JLabel productsTypeLabel;
+    private javax.swing.JTextPane textPaneAsh;
     private javax.swing.JButton viewProductsChangePageButton;
     private javax.swing.JButton viewProductsGetListButton;
     private javax.swing.JLabel viewProductsLabel;
