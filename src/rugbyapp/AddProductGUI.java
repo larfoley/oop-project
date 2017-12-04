@@ -382,6 +382,11 @@ public class AddProductGUI extends javax.swing.JFrame {
                 
             }
            DialogBox.alert("Product Added");
+           QuantityTf.setText("");
+           ProductNameTf.setText("");
+           PriceTf.setText("");
+           TeamTf.setText("");
+
         } else {
             // Display error
             DialogBox.alert("Some required feilds are blank");
