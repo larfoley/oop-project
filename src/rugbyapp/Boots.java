@@ -32,7 +32,11 @@ public class Boots extends Product implements Serializable {
     public void setStudType(String studType) {
         this.studType = studType;
     }
-
+    
+    @Override
+    public String getInfo(){
+        return "Product ID: "+id+"\nProduct Name: "+name+"\nProduct Price: "+price+"\nQuantity: "+quantity+"\nStud Type"+studType;
+    }
   
 
  

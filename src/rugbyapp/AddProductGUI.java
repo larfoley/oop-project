@@ -287,35 +287,105 @@ public class AddProductGUI extends javax.swing.JFrame {
 
     private void AddProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddProductBtnActionPerformed
         // TODO add your handling code here:
+        
         Stock stock = new Stock();
-        Product product;
+        boolean formIsValid=true;
+        String productType = (String)TypeComboBox.getSelectedItem();
+        int quantity;
+        String name;
+        double price;
+        String team;
+        String sleeveType;
+        String collarType;
+        String gloveType;
+        String material;
+        String weather;
+        String studType;
         
-        int quantity=Integer.parseInt(QuantityTf.getText());
-        String name = ProductNameTf.getText();
-        double price = Double.parseDouble(PriceTf.getText());
-        String team = TeamTf.getText();
-        String sleeveType = (String)SleeveComboBox.getSelectedItem();
-        String collarType = (String)CollarComboBox.getSelectedItem();
-        String gloveType = (String)GloveTypeComboBox.getSelectedItem();
-        String material = (String)GloveMaterialComboBox.getSelectedItem();
-        String weather = (String)WeatherComboBox.getSelectedItem();
-        String studType = (String)StudComboBox.getSelectedItem();
-
-        if(TypeComboBox.getSelectedItem().equals("Jersey")) {
-            product = new Jersey(name, price, team, sleeveType, collarType);
-  
-        } else if(TypeComboBox.getSelectedItem().equals("Gloves")) {
-            product = new Gloves(name, price, gloveType, material, weather);
-
+        
+        //====================================
+        // Validate form inputs
+        //====================================
+        
+        
+        try {
+            Integer.parseInt(QuantityTf.getText());
+            Double.parseDouble(PriceTf.getText());
+            
+        } catch (NumberFormatException e) {            
+            formIsValid=false;
         }
-        else {
-            product = new Boots(name, price, studType);
-          
+        
+        if (formIsValid) {
+           if ((QuantityTf.getText().equals("0")) ) {
+               formIsValid=false;
+           }  
         }
         
-        stock.addProduct(product);
+        if (ProductNameTf.getText().trim().equals("")) {
+            formIsValid=false;
+        }
         
-        DialogBox.alert("Product Added");
+        
+        if (productType.equals("Jersey")) {
+            // Validate jersey inputs
+            if(TeamTf.getText().trim().equals("") ){
+                formIsValid=false;
+            }
+        } 
+    
+        
+        //====================================
+        // if form is valid add products else 
+        // display error
+        //=====================================
+        
+        if (formIsValid) {
+            // Add Product
+            
+            // Asign univeral products variables
+            quantity=Integer.parseInt(QuantityTf.getText());
+            name = ProductNameTf.getText();
+            price = Double.parseDouble(PriceTf.getText());
+            
+           if (productType.equals("Jersey")) {
+               
+                team = TeamTf.getText();
+                sleeveType = (String)SleeveComboBox.getSelectedItem();
+                collarType = (String)CollarComboBox.getSelectedItem();
+                
+                // add products based on quantity
+                for (int i = 0; i < quantity; i++) {
+                stock.addProduct(new Jersey(name, price, team, sleeveType, collarType));
+                
+                    
+            }
+            
+            } else if (productType.equals("Boots")) {
+                studType = (String)StudComboBox.getSelectedItem();
+                for (int i = 0; i < quantity; i++) {
+                stock.addProduct(new Boots(name, price, studType));
+                
+                    
+            }
+                
+            } else {
+                
+                gloveType = (String)GloveTypeComboBox.getSelectedItem();
+                material = (String)GloveMaterialComboBox.getSelectedItem();
+                weather = (String)WeatherComboBox.getSelectedItem();
+                
+                for (int i = 0; i < quantity; i++) {
+                stock.addProduct(new Gloves(name, price, gloveType, material, weather));
+                
+                }
+                
+            }
+           DialogBox.alert("Product Added");
+        } else {
+            // Display error
+            DialogBox.alert("Some required feilds are blank");
+        }
         
         
         
