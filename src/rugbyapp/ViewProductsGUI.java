@@ -5,6 +5,8 @@
  */
 package rugbyapp;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author James Ganley
@@ -55,7 +57,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
         productsTypeLabel.setText("Products Type");
 
-        productsTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        productsTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Jerseys", "Gloves", "Boots" }));
         productsTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productsTypeComboBoxActionPerformed(evt);
@@ -63,6 +65,11 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         });
 
         viewProductsGetListButton.setText("View Products");
+        viewProductsGetListButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewProductsGetListButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -117,6 +124,70 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         view.render("addProduct");
     }//GEN-LAST:event_addProductsChangePageButtonActionPerformed
+
+    private void viewProductsGetListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsGetListButtonActionPerformed
+        // TODO add your handling code here:
+        String productType = (String)productsTypeComboBox.getSelectedItem();
+        System.out.println(productType);
+        Stock stock = new Stock();
+        ArrayList<Product> products = stock.getProducts();
+        Product p = products.get(0);
+        
+        
+        String output = "";
+        
+        if(productType.equals("all")){
+        p.getName();
+        p.getId();
+        p.getPrice();
+        p.getQuantity();
+        for (int i = 0; i < products.size(); i++) {
+            output = output + "Name: " + products.get(i).getName() + "\n" + 
+                "ID: " + products.get(i).getId() + "\n" + 
+                "Price: " + products.get(i).getPrice() + "\n" +
+                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+            }
+        }
+        else if(productType.equals("Jersey")){
+            p.getName();
+        p.getId();
+        p.getPrice();
+        p.getQuantity();
+            for (int i = 0; i < products.size(); i++) {
+            output = output + "Name: " + products.get(i).getName() + "\n" + 
+                "ID: " + products.get(i).getId() + "\n" + 
+                "Price: " + products.get(i).getPrice() + "\n" +
+                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+                
+            }
+        }
+        else if(productType.equals("Boots")){
+            p.getName();
+        p.getId();
+        p.getPrice();
+        p.getQuantity();
+            for (int i = 0; i < products.size(); i++) {
+            output = output + "Name: " + products.get(i).getName() + "\n" + 
+                "ID: " + products.get(i).getId() + "\n" + 
+                "Price: " + products.get(i).getPrice() + "\n" +
+                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+            }
+        }
+        else (productType.equals("Gloves")){
+        p.getName();
+        p.getId();
+        p.getPrice();
+        p.getQuantity();
+            for (int i = 0; i < products.size(); i++) {
+            output = output + "Name: " + products.get(i).getName() + "\n" + 
+                "ID: " + products.get(i).getId() + "\n" + 
+                "Price: " + products.get(i).getPrice() + "\n" +
+                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+            }
+        }
+        
+        System.out.printf(output);
+    }//GEN-LAST:event_viewProductsGetListButtonActionPerformed
 
     /**
      * @param args the command line arguments
