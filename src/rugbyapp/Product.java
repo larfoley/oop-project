@@ -69,6 +69,9 @@ public class Product implements Serializable {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
+    
+    public String getInfo(){
+        return "Product ID: "+id+"\nProduct Name: "+name+"\nProduct Price: "+price+"\nQuantity: "+quantity;
+    }
 
 }

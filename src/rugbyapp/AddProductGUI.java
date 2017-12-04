@@ -317,7 +317,6 @@ public class AddProductGUI extends javax.swing.JFrame {
         }
         
         if (formIsValid) {
-           System.out.println("integer is convertable");
            if ((QuantityTf.getText().equals("0")) ) {
                formIsValid=false;
            }  
@@ -343,7 +342,7 @@ public class AddProductGUI extends javax.swing.JFrame {
         
         if (formIsValid) {
             // Add Product
-            DialogBox.alert("trying to add a product");
+            
             // Asign univeral products variables
             quantity=Integer.parseInt(QuantityTf.getText());
             name = ProductNameTf.getText();
@@ -358,7 +357,7 @@ public class AddProductGUI extends javax.swing.JFrame {
                 // add products based on quantity
                 for (int i = 0; i < quantity; i++) {
                 stock.addProduct(new Jersey(name, price, team, sleeveType, collarType));
-                DialogBox.alert("Product Added");
+                
                     
             }
             
@@ -366,7 +365,7 @@ public class AddProductGUI extends javax.swing.JFrame {
                 studType = (String)StudComboBox.getSelectedItem();
                 for (int i = 0; i < quantity; i++) {
                 stock.addProduct(new Boots(name, price, studType));
-                DialogBox.alert("Product Added");
+                
                     
             }
                 
@@ -378,10 +377,11 @@ public class AddProductGUI extends javax.swing.JFrame {
                 
                 for (int i = 0; i < quantity; i++) {
                 stock.addProduct(new Gloves(name, price, gloveType, material, weather));
-                DialogBox.alert("Product Added");
+                
                 }
+                
             }
-           
+           DialogBox.alert("Product Added");
         } else {
             // Display error
             DialogBox.alert("Some required feilds are blank");

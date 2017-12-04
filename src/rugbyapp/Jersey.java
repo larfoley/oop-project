@@ -54,5 +54,10 @@ public class Jersey extends Product implements Serializable{
     public void setCollarType(String collarType) {
         this.collarType = collarType;
     }
+    @Override
+    public String getInfo(){
+        return "Product ID: "+id+"\nProduct Name: "+name+"\nProduct Price: "+price+"\nQuantity: "+quantity+
+                "\nTeam Name: "+team+"\nSleeve Type: "+sleeveType+"\nCollar Type: "+collarType;
+    }
     
 }
