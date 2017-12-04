@@ -105,8 +105,8 @@
           <StringArray count="4">
             <StringItem index="0" value="All"/>
             <StringItem index="1" value="Jerseys"/>
-            <StringItem index="2" value="Gloves"/>
-            <StringItem index="3" value="Boots"/>
+            <StringItem index="2" value="Boots"/>
+            <StringItem index="3" value="Gloves"/>
           </StringArray>
         </Property>
       </Properties>

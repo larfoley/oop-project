@@ -57,7 +57,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
         productsTypeLabel.setText("Products Type");
 
-        productsTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Jerseys", "Gloves", "Boots" }));
+        productsTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Jerseys", "Boots", "Gloves" }));
         productsTypeComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productsTypeComboBoxActionPerformed(evt);
@@ -127,62 +127,63 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
     private void viewProductsGetListButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsGetListButtonActionPerformed
         // TODO add your handling code here:
+//        https://en.wikibooks.org/wiki/Java_Programming/Keywords/instanceof
+
         String productType = (String)productsTypeComboBox.getSelectedItem();
         System.out.println(productType);
         Stock stock = new Stock();
         ArrayList<Product> products = stock.getProducts();
-        Product p = products.get(0);
-        
-        
         String output = "";
+        ArrayList<Product> jerseys = new ArrayList();
+        ArrayList<Product> boots = new ArrayList();
+        ArrayList<Product> gloves = new ArrayList();
         
-        if(productType.equals("all")){
-        p.getName();
-        p.getId();
-        p.getPrice();
-        p.getQuantity();
+        // populate product arrays
+        //.....
         for (int i = 0; i < products.size(); i++) {
-            output = output + "Name: " + products.get(i).getName() + "\n" + 
-                "ID: " + products.get(i).getId() + "\n" + 
-                "Price: " + products.get(i).getPrice() + "\n" +
-                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+            
+            if (products.get(i) instanceof Jersey) {
+                jerseys.add(products.get(i));
+            }
+            
+            if (products.get(i) instanceof Boots) {
+                boots.add(products.get(i));
+            }
+            
+            if (products.get(i) instanceof Gloves) {
+                gloves.add(products.get(i));
             }
         }
-        else if(productType.equals("Jersey")){
-            p.getName();
-        p.getId();
-        p.getPrice();
-        p.getQuantity();
+        
+   
+    
+ 
+        if(productType.equals("All")) {
+            
+            for (int i = 0; i < jerseys.size(); i++) {
+                output += jerseys.get(i).getInfo() + "\n";
+            }
+            
             for (int i = 0; i < products.size(); i++) {
-            output = output + "Name: " + products.get(i).getName() + "\n" + 
-                "ID: " + products.get(i).getId() + "\n" + 
-                "Price: " + products.get(i).getPrice() + "\n" +
-                "Quantity: " + products.get(i).getQuantity() + "\n" ;
-                
+                output += boots.get(i).getInfo() + "\n";
+            }
+            
+            for (int i = 0; i < products.size(); i++) {
+                output += gloves.get(i).getInfo() + "\n";
+            }
+           
+        } else if(productType.equals("Jerseys")) {
+            for (int i = 0; i < products.size(); i++) {
+                output += jerseys.get(i).getInfo() + "\n";
             }
         }
         else if(productType.equals("Boots")){
-            p.getName();
-        p.getId();
-        p.getPrice();
-        p.getQuantity();
             for (int i = 0; i < products.size(); i++) {
-            output = output + "Name: " + products.get(i).getName() + "\n" + 
-                "ID: " + products.get(i).getId() + "\n" + 
-                "Price: " + products.get(i).getPrice() + "\n" +
-                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+                output += boots.get(i).getInfo() + "\n";
             }
-        }
-        else (productType.equals("Gloves")){
-        p.getName();
-        p.getId();
-        p.getPrice();
-        p.getQuantity();
+        } else {
             for (int i = 0; i < products.size(); i++) {
-            output = output + "Name: " + products.get(i).getName() + "\n" + 
-                "ID: " + products.get(i).getId() + "\n" + 
-                "Price: " + products.get(i).getPrice() + "\n" +
-                "Quantity: " + products.get(i).getQuantity() + "\n" ;
+                output += gloves.get(i).getInfo() + "\n";
             }
         }
         
@@ -223,6 +224,10 @@ public class ViewProductsGUI extends javax.swing.JFrame {
             }
         });
     }
+    
+    
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addProductsChangePageButton;
