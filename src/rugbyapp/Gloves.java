@@ -53,6 +53,11 @@ public class Gloves extends Product implements Serializable{
     public void setWeather(String weather) {
         this.weather = weather;
     }
+    @Override
+    public String getInfo(){
+        return "Product ID: "+id+"\nProduct Name: "+name+"\nProduct Price: "+price+"\nQuantity: "+quantity+
+                "\nGlove Type: "+gloveType+"\nGlove Material: "+material+"\nWeather Type: "+weather;
+    }
 
   
    
