@@ -145,9 +145,7 @@ public class Stock implements Serializable {
         
     }
     
-    
-//     Object o = products.get(0);
-//     Product p = (Product)o;
+ 
     
    
     
