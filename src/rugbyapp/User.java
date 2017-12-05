@@ -9,13 +9,14 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author x15047911
  */
-public class User {
+public class User implements Serializable {
     private String username;
     private String password;
     private boolean loggedIn;
@@ -23,6 +24,7 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.loggedIn = false;
     }
     
     public void login(String username, String password) {
@@ -44,9 +46,7 @@ public class User {
                 loggedIn = true;
             }
         }
-        if (username.equals(this.username) && password.equals(this.password)) {
-            loggedIn = true;
-        }
+        
     }
     
     public String getUsername() {

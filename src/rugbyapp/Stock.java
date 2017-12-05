@@ -122,6 +122,7 @@ public class Stock implements Serializable {
                   this.products.get(i).decreaseQuantity();
               } else {
                   // remove product
+                  this.products.remove(i);
               }
               break;
             }

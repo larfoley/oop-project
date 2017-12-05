@@ -20,11 +20,16 @@ public class App {
      */
     public static void main(String[] args) {
         
+        // Add default user
+        Users users = new Users();
+        
+        if (users.userExists("admin")) {
+            users.addUser(new User("admin", "password"));
+        }
+        
         // Render the login view
          new Views().render("login");
         
-       
-
     }
     
 }

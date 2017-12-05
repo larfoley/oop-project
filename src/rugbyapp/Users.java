@@ -11,13 +11,14 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author x15047911
  */
-public class Users {
+public class Users implements Serializable {
     private ArrayList<User> users;
     
     public Users() {
@@ -52,10 +53,12 @@ public class Users {
             }
             
         }
+        
+        System.out.println(this.users);
     }
     
     public boolean addUser(User user) {
-        
+        System.out.println("Adding user...");
         this.users.add(user);
         
         // update user.dat file
@@ -80,6 +83,15 @@ public class Users {
                 this.users.remove(i);
             }
         }
+    }
+    
+    public boolean userExists(String username) {
+        for (int i = 0; i < this.users.size(); i++) {
+            if (this.users.get(i).getUsername().equals(username)) {
+                return true;
+            }
+        }
+        return false;
     }
     
 }

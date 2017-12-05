@@ -190,23 +190,35 @@ public class UsersGUI extends javax.swing.JFrame {
 
     private void CreateUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateUserBtnActionPerformed
         // TODO add your handling code here:
-        if(createUserTf.getText().equals("")||(PasswordTf.getText().equals(""))){
+        
+        Users users = new Users();
+        
+        username=createUserTf.getText();
+        password=PasswordTf.getText();
+        
+        if(username.equals("")||(password.equals(""))){
             DialogBox.alert("One of the input feild is empty");
+            return;
         }
-        else{
-            username=createUserTf.getText();
-            password=PasswordTf.getText();
+        
+        if (users.addUser(new User(username, password))) {
+            DialogBox.alert("User Created");
+        } else {
+            DialogBox.alert("Error Creating User");
         }
     }//GEN-LAST:event_CreateUserBtnActionPerformed
 
     private void DeletUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletUserBtnActionPerformed
         // TODO add your handling code here:
-        if(DeleteUserTf.getText().equals("")){
-            DialogBox.alert("feild is empty");
-        }
-        else{
-            delete=DeleteUserTf.getText();
-        }
+        Users users = new Users();
+        String username = DeleteUserTf.getText().trim();
+        
+        if(username.equals("")){
+            DialogBox.alert("username field is empty");
+            return;
+        }   
+        
+        
     }//GEN-LAST:event_DeletUserBtnActionPerformed
 
     /**
