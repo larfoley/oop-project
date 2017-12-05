@@ -152,6 +152,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Create User"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CreateUserBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="DeleteUseLabel">
       <Properties>
@@ -175,6 +178,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Delete User"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeletUserBtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JToggleButton" name="addProductBtn">
       <Properties>
