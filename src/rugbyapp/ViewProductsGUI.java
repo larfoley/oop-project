@@ -42,6 +42,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         viewProductsGetListButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         textPaneAsh = new javax.swing.JTextPane();
+        UserBtn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +57,11 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         });
 
         viewProductsChangePageButton.setText("View Products");
+        viewProductsChangePageButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewProductsChangePageButtonActionPerformed(evt);
+            }
+        });
 
         productsTypeLabel.setText("Products Type");
 
@@ -75,6 +81,13 @@ public class ViewProductsGUI extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(textPaneAsh);
 
+        UserBtn.setText("Users");
+        UserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UserBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,26 +95,29 @@ public class ViewProductsGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addComponent(viewProductsLabel))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(98, 98, 98)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(productsTypeLabel)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(75, 75, 75)
-                                    .addComponent(viewProductsGetListButton))
-                                .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(68, 68, 68)
-                            .addComponent(addProductsChangePageButton)
-                            .addGap(78, 78, 78)
-                            .addComponent(viewProductsChangePageButton)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(UserBtn)
+                            .addComponent(viewProductsLabel))))
                 .addContainerGap(102, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(productsTypeLabel)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(75, 75, 75)
+                            .addComponent(viewProductsGetListButton))
+                        .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(addProductsChangePageButton)
+                        .addGap(131, 131, 131)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(viewProductsChangePageButton)
+                .addGap(74, 74, 74))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,7 +125,8 @@ public class ViewProductsGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addProductsChangePageButton)
-                    .addComponent(viewProductsChangePageButton))
+                    .addComponent(viewProductsChangePageButton)
+                    .addComponent(UserBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(viewProductsLabel)
                 .addGap(18, 18, 18)
@@ -207,6 +224,16 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_viewProductsGetListButtonActionPerformed
 
+    private void UserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserBtnActionPerformed
+        // TODO add your handling code here:
+        view.render("users");
+    }//GEN-LAST:event_UserBtnActionPerformed
+
+    private void viewProductsChangePageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsChangePageButtonActionPerformed
+        // TODO add your handling code here:
+        view.render("viewProducts");
+    }//GEN-LAST:event_viewProductsChangePageButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -247,6 +274,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton UserBtn;
     private javax.swing.JButton addProductsChangePageButton;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JComboBox<String> productsTypeComboBox;

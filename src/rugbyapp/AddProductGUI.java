@@ -6,6 +6,7 @@
 package rugbyapp;
 
 import java.util.ArrayList;
+//import java
 
 /**
  *
@@ -55,6 +56,7 @@ public class AddProductGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jColorChooser1 = new javax.swing.JColorChooser();
         AddBtn = new javax.swing.JToggleButton();
         ViewBtn = new javax.swing.JToggleButton();
         AddProductLbl = new javax.swing.JLabel();
@@ -81,10 +83,19 @@ public class AddProductGUI extends javax.swing.JFrame {
         StudTypeLabel = new javax.swing.JLabel();
         StudComboBox = new javax.swing.JComboBox<>();
         AddProductBtn = new javax.swing.JToggleButton();
+        jToggleButton1 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(233, 72, 101));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(new java.awt.Color(255, 72, 132));
 
         AddBtn.setText("Add Product");
+        AddBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddBtnActionPerformed(evt);
+            }
+        });
 
         ViewBtn.setText("View Product");
         ViewBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -165,52 +176,60 @@ public class AddProductGUI extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton1.setText("Users");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AddBtn)
+                .addGap(35, 35, 35)
+                .addComponent(jToggleButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(ViewBtn)
+                .addGap(28, 28, 28))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ProductTypeLabel)
-                                    .addComponent(ProductNameLabel)
-                                    .addComponent(QuantityLabel)
-                                    .addComponent(PriceLabel)
-                                    .addComponent(TeamLabel)
-                                    .addComponent(CollarTypeLabel)
-                                    .addComponent(GloveTypeLabel)
-                                    .addComponent(SleeveTypeLabel)
-                                    .addComponent(GloveMaterialLabel)
-                                    .addComponent(WeatherTypeLabel)
-                                    .addComponent(StudTypeLabel))
-                                .addGap(72, 72, 72)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(TypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ProductNameTf)
-                                    .addComponent(QuantityTf)
-                                    .addComponent(PriceTf)
-                                    .addComponent(GloveTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(TeamTf)
-                                    .addComponent(SleeveComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(CollarComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(GloveMaterialComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(WeatherComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(StudComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(AddBtn)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ViewBtn))))
+                            .addComponent(ProductTypeLabel)
+                            .addComponent(ProductNameLabel)
+                            .addComponent(QuantityLabel)
+                            .addComponent(PriceLabel)
+                            .addComponent(TeamLabel)
+                            .addComponent(CollarTypeLabel)
+                            .addComponent(GloveTypeLabel)
+                            .addComponent(SleeveTypeLabel)
+                            .addComponent(GloveMaterialLabel)
+                            .addComponent(WeatherTypeLabel)
+                            .addComponent(StudTypeLabel))
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(TypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ProductNameTf)
+                            .addComponent(QuantityTf)
+                            .addComponent(PriceTf)
+                            .addComponent(GloveTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(TeamTf)
+                            .addComponent(SleeveComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CollarComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(GloveMaterialComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(WeatherComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(StudComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
+                        .addGap(62, 62, 62)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(AddProductLbl)
-                            .addComponent(AddProductBtn))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(63, 63, 63))
+                            .addComponent(AddProductBtn))))
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -218,7 +237,8 @@ public class AddProductGUI extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AddBtn)
-                    .addComponent(ViewBtn))
+                    .addComponent(ViewBtn)
+                    .addComponent(jToggleButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(AddProductLbl)
                 .addGap(26, 26, 26)
@@ -491,6 +511,16 @@ public class AddProductGUI extends javax.swing.JFrame {
         view.render("viewProduct");
     }//GEN-LAST:event_ViewBtnActionPerformed
 
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+        view.render("users");
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void AddBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddBtnActionPerformed
+        // TODO add your handling code here:
+        view.render("addProduct");
+    }//GEN-LAST:event_AddBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -553,5 +583,7 @@ public class AddProductGUI extends javax.swing.JFrame {
     private javax.swing.JToggleButton ViewBtn;
     private javax.swing.JComboBox<String> WeatherComboBox;
     private javax.swing.JLabel WeatherTypeLabel;
+    private javax.swing.JColorChooser jColorChooser1;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
