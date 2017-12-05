@@ -98,9 +98,10 @@ public class LoginGUI extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         // TODO add your handling code here:
-        User user = new User();
+        
         String username = usernameTextField.getText();
         String password = passwordTextField.getText();
+        User user = new User(username, password);
         
         
         

@@ -5,21 +5,58 @@
  */
 package rugbyapp;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.util.ArrayList;
+
 /**
  *
  * @author x15047911
  */
 public class User {
-    private String username = "admin";
-    private String password = "letmein";
-    private boolean loggedIn = false;
+    private String username;
+    private String password;
+    private boolean loggedIn;
+    
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
     
     public void login(String username, String password) {
-
+        ArrayList<User> users = new ArrayList();
+        
+        try {
+            // Try Read user file
+            File file = new File("users.dat");
+            FileInputStream fStream = new FileInputStream(file);
+            ObjectInputStream iStream = new ObjectInputStream(fStream);
+            users = (ArrayList<User>)iStream.readObject();
+            
+        } catch(IOException | ClassNotFoundException e) {
+            System.out.println("Error reading file: " + e);
+        }
+        
+        for (int i = 0; i < users.size(); i++) {
+            if (users.get(i).getUsername().equals(username) && users.get(i).getPassword().equals(password)) {
+                loggedIn = true;
+            }
+        }
         if (username.equals(this.username) && password.equals(this.password)) {
             loggedIn = true;
         }
     }
+    
+    public String getUsername() {
+        return this.username;
+    }
+    
+    public String getPassword() {
+        return this.password;
+    }
+    
     
     public boolean isLoggedIn() {
         return loggedIn;
