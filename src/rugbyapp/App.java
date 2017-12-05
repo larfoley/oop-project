@@ -21,7 +21,7 @@ public class App {
     public static void main(String[] args) {
         
         // Render the login view
-         new Views().render("viewProduct");
+         new Views().render("login");
         
        
 

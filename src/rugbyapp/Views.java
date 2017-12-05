@@ -15,11 +15,13 @@ public class Views {
     LoginGUI loginGUI = new LoginGUI(this);
     AddProductGUI addProductGUI = new AddProductGUI(this);
     ViewProductsGUI viewProductsGUI = new ViewProductsGUI(this);
+    UsersGUI users=new UsersGUI(this);
     
     public Views() {
         loginGUI.setVisible(false);
         addProductGUI.setVisible(false);
         viewProductsGUI.setVisible(false);
+        users.setVisible(false);
     }
     
     public void render(String viewName) {
@@ -28,18 +30,28 @@ public class Views {
                loginGUI.setVisible(true);
                addProductGUI.setVisible(false);
                viewProductsGUI.setVisible(false);
+               users.setVisible(false);
                break; 
 
             case "addProduct" :
                loginGUI.setVisible(false);
                addProductGUI.setVisible(true);
                viewProductsGUI.setVisible(false);
+               users.setVisible(false);
                break;
             
             case "viewProduct" :
                 loginGUI.setVisible(false);
                 addProductGUI.setVisible(false);
                 viewProductsGUI.setVisible(true);
+                users.setVisible(false);
+            break;
+            
+            case "users" :
+                loginGUI.setVisible(false);
+                addProductGUI.setVisible(false);
+                viewProductsGUI.setVisible(false);
+                users.setVisible(true);
             break;
             
             default :
