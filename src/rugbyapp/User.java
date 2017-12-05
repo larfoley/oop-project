@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author x15047911
+ * @author x15047911-Laurence Foley
  */
 public class User implements Serializable {
     private String username;

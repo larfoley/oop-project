@@ -7,7 +7,7 @@ package rugbyapp;
 
 /**
  *
- * @author x16103530
+ * @author x16103530-Ashish Kumar Singh
  */
 public class UsersGUI extends javax.swing.JFrame {
 

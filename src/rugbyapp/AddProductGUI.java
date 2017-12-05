@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author blras
+ * @author blras-Ashish Kumar Singh
  */
 public class AddProductGUI extends javax.swing.JFrame {
     

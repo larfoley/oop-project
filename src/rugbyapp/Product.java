@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author x16103530
+ * @author x16103530-Ashish Kumar Singh
  */
 public class Product implements Serializable {
     protected int id;
@@ -35,7 +35,10 @@ public class Product implements Serializable {
     }
     
     public void decreaseQuantity() {
-        this.quantity = this.quantity == 0 ? this.quantity-- : this.quantity;
+        System.out.println(this.quantity);
+        if (this.quantity > 0 ) {
+            this.quantity--;
+        }
     }
 
     public int getId() {

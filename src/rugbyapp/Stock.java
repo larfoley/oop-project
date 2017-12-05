@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author x15047911
+ * @author x15047911-Laurence Foley
  */
 
 
@@ -113,7 +113,7 @@ public class Stock implements Serializable {
     }
     
     public void removeProduct(int id) {
-        
+        System.out.println("attempting to delete product...");
         for (int i = 0; i < this.products.size(); i++) {
       
             if (this.products.get(i).getId() == id) {
@@ -122,6 +122,7 @@ public class Stock implements Serializable {
                   this.products.get(i).decreaseQuantity();
               } else {
                   // remove product
+                  System.out.println("deleting product...");
                   this.products.remove(i);
               }
               break;

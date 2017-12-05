@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author x15047911
+ * @author x15047911-Laurence Foley
  */
 public class Users implements Serializable {
     private ArrayList<User> users;
