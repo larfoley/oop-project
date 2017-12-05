@@ -21,9 +21,6 @@ public class UsersGUI extends javax.swing.JFrame {
     public UsersGUI(Views view) {
         initComponents();
         this.view=view;
-        username="";
-        password="";
-        delete="";
     }
 
     /**
@@ -49,6 +46,7 @@ public class UsersGUI extends javax.swing.JFrame {
         addProductBtn = new javax.swing.JToggleButton();
         viewProductBtn = new javax.swing.JToggleButton();
         UserBtn = new javax.swing.JToggleButton();
+        logoutBtn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,6 +98,13 @@ public class UsersGUI extends javax.swing.JFrame {
 
         UserBtn.setText("Users");
 
+        logoutBtn.setText("Logout");
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,11 +146,15 @@ public class UsersGUI extends javax.swing.JFrame {
                 .addGap(175, 175, 175)
                 .addComponent(UserTitleLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(logoutBtn))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(logoutBtn)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addProductBtn)
                     .addComponent(viewProductBtn)
@@ -172,7 +181,7 @@ public class UsersGUI extends javax.swing.JFrame {
                 .addComponent(DeleteUserTf, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(DeletUserBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74))
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -193,8 +202,8 @@ public class UsersGUI extends javax.swing.JFrame {
         
         Users users = new Users();
         
-        username=createUserTf.getText();
-        password=PasswordTf.getText();
+        String username = createUserTf.getText();
+        String password = PasswordTf.getText();
         
         if(username.equals("")||(password.equals(""))){
             DialogBox.alert("One of the input feild is empty");
@@ -216,10 +225,20 @@ public class UsersGUI extends javax.swing.JFrame {
         if(username.equals("")){
             DialogBox.alert("username field is empty");
             return;
-        }   
+        }
+        
+        if (users.deleteUser(username)) {
+            DialogBox.alert(username + " is deleted");
+        }
         
         
     }//GEN-LAST:event_DeletUserBtnActionPerformed
+
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // TODO add your handling code here:
+                        view.render("login");
+
+    }//GEN-LAST:event_logoutBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -270,6 +289,7 @@ public class UsersGUI extends javax.swing.JFrame {
     private javax.swing.JLabel UserTitleLabel;
     private javax.swing.JToggleButton addProductBtn;
     private javax.swing.JTextField createUserTf;
+    private javax.swing.JToggleButton logoutBtn;
     private javax.swing.JToggleButton viewProductBtn;
     // End of variables declaration//GEN-END:variables
 }

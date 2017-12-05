@@ -77,12 +77,27 @@ public class Users implements Serializable {
         }
     }
     
-    public void deleteUser(String username) {
+    public boolean deleteUser(String username) {
         for (int i = 0; i < this.users.size(); i++) {
-            if (this.users.get(i).getUsername() == username) {
+            if (this.users.get(i).getUsername().equals(username)) {
                 this.users.remove(i);
+                try {
+                    FileOutputStream outputStream = new FileOutputStream(new File("users.dat"));
+                    ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
+                    objectOutputStream.writeObject(this.users);
+                    outputStream.close();
+                    objectOutputStream.close();
+                    System.out.println("user file updated");
+                    return true;
+            
+                } catch(IOException e) {
+                    System.out.println("Unable to update user file: " + e);
+                    return false;
+                }
+                
             }
         }
+        return false;
     }
     
     public boolean userExists(String username) {

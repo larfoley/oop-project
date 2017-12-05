@@ -84,6 +84,7 @@ public class AddProductGUI extends javax.swing.JFrame {
         StudComboBox = new javax.swing.JComboBox<>();
         AddProductBtn = new javax.swing.JToggleButton();
         jToggleButton1 = new javax.swing.JToggleButton();
+        logoutBtn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(233, 72, 101));
@@ -183,65 +184,80 @@ public class AddProductGUI extends javax.swing.JFrame {
             }
         });
 
+        logoutBtn.setText("Logout");
+        logoutBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(AddBtn)
-                .addGap(35, 35, 35)
-                .addComponent(jToggleButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(ViewBtn)
-                .addGap(28, 28, 28))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(AddBtn)
+                        .addGap(35, 35, 35)
+                        .addComponent(jToggleButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                        .addComponent(ViewBtn)
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ProductTypeLabel)
-                            .addComponent(ProductNameLabel)
-                            .addComponent(QuantityLabel)
-                            .addComponent(PriceLabel)
-                            .addComponent(TeamLabel)
-                            .addComponent(CollarTypeLabel)
-                            .addComponent(GloveTypeLabel)
-                            .addComponent(SleeveTypeLabel)
-                            .addComponent(GloveMaterialLabel)
-                            .addComponent(WeatherTypeLabel)
-                            .addComponent(StudTypeLabel))
-                        .addGap(72, 72, 72)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(TypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ProductNameTf)
-                            .addComponent(QuantityTf)
-                            .addComponent(PriceTf)
-                            .addComponent(GloveTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TeamTf)
-                            .addComponent(SleeveComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CollarComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(GloveMaterialComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(WeatherComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(StudComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AddProductLbl)
-                            .addComponent(AddProductBtn))))
-                .addGap(41, 41, 41))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(AddProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addContainerGap())
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(ProductTypeLabel)
+                                                .addComponent(ProductNameLabel)
+                                                .addComponent(QuantityLabel)
+                                                .addComponent(PriceLabel)
+                                                .addComponent(TeamLabel)
+                                                .addComponent(CollarTypeLabel)
+                                                .addComponent(GloveTypeLabel)
+                                                .addComponent(SleeveTypeLabel)
+                                                .addComponent(GloveMaterialLabel)
+                                                .addComponent(WeatherTypeLabel)
+                                                .addComponent(StudTypeLabel))
+                                            .addGap(72, 72, 72)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(TypeComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(ProductNameTf)
+                                                .addComponent(QuantityTf)
+                                                .addComponent(PriceTf)
+                                                .addComponent(GloveTypeComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(TeamTf)
+                                                .addComponent(SleeveComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(CollarComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(GloveMaterialComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(WeatherComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(StudComboBox, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(62, 62, 62)
+                                            .addComponent(AddProductLbl)))
+                                    .addGap(41, 41, 41)))
+                            .addComponent(logoutBtn, javax.swing.GroupLayout.Alignment.TRAILING)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addComponent(logoutBtn)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(AddBtn)
                     .addComponent(ViewBtn)
                     .addComponent(jToggleButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(AddProductLbl)
-                .addGap(26, 26, 26)
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ProductTypeLabel)
                     .addComponent(TypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -285,9 +301,9 @@ public class AddProductGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(StudTypeLabel)
                     .addComponent(StudComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addComponent(AddProductBtn)
-                .addGap(27, 27, 27))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
@@ -521,6 +537,12 @@ public class AddProductGUI extends javax.swing.JFrame {
         view.render("addProduct");
     }//GEN-LAST:event_AddBtnActionPerformed
 
+    private void logoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutBtnActionPerformed
+        // TODO add your handling code here:
+                view.render("login");
+
+    }//GEN-LAST:event_logoutBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -585,5 +607,6 @@ public class AddProductGUI extends javax.swing.JFrame {
     private javax.swing.JLabel WeatherTypeLabel;
     private javax.swing.JColorChooser jColorChooser1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JToggleButton logoutBtn;
     // End of variables declaration//GEN-END:variables
 }

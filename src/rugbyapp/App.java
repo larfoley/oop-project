@@ -22,9 +22,11 @@ public class App {
         
         // Add default user
         Users users = new Users();
-        
+        users.addUser(new User("admin", "password"));
         if (users.userExists("admin")) {
-            users.addUser(new User("admin", "password"));
+//            users.addUser(new User("admin", "password"));
+        } else {
+            System.out.println("user alread exists");
         }
         
         // Render the login view

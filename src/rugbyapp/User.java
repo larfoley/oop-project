@@ -25,6 +25,7 @@ public class User implements Serializable {
         this.username = username;
         this.password = password;
         this.loggedIn = false;
+        
     }
     
     public void login(String username, String password) {
@@ -36,12 +37,18 @@ public class User implements Serializable {
             FileInputStream fStream = new FileInputStream(file);
             ObjectInputStream iStream = new ObjectInputStream(fStream);
             users = (ArrayList<User>)iStream.readObject();
+            System.out.println(users);
             
         } catch(IOException | ClassNotFoundException e) {
             System.out.println("Error reading file: " + e);
         }
-        
+
         for (int i = 0; i < users.size(); i++) {
+            System.out.println("username");
+            System.out.println(users.get(i).getUsername());
+            System.out.println("password");
+            System.out.println(users.get(i).getPassword());
+            
             if (users.get(i).getUsername().equals(username) && users.get(i).getPassword().equals(password)) {
                 loggedIn = true;
             }

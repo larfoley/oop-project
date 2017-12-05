@@ -38,69 +38,82 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="AddBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="25" max="32767" attributes="0"/>
-              <Component id="ViewBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="ProductTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ProductNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="QuantityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="PriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="TeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="CollarTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="GloveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="SleeveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="WeatherTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="StudTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="TypeComboBox" max="32767" attributes="0"/>
-                          <Component id="ProductNameTf" alignment="1" max="32767" attributes="0"/>
-                          <Component id="QuantityTf" alignment="1" max="32767" attributes="0"/>
-                          <Component id="PriceTf" max="32767" attributes="0"/>
-                          <Component id="GloveTypeComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="TeamTf" alignment="1" max="32767" attributes="0"/>
-                          <Component id="SleeveComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="CollarComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="GloveMaterialComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="WeatherComboBox" alignment="0" max="32767" attributes="0"/>
-                          <Component id="StudComboBox" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="AddBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jToggleButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <Component id="ViewBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
-                          <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="AddProductBtn" min="-2" pref="249" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="ProductTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ProductNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="QuantityLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="PriceLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="TeamLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="CollarTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="GloveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="SleeveTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="GloveMaterialLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="WeatherTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="StudTypeLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="TypeComboBox" max="32767" attributes="0"/>
+                                              <Component id="ProductNameTf" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="QuantityTf" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="PriceTf" max="32767" attributes="0"/>
+                                              <Component id="GloveTypeComboBox" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="TeamTf" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="SleeveComboBox" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="CollarComboBox" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="GloveMaterialComboBox" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="WeatherComboBox" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="StudComboBox" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                          <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="logoutBtn" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="logoutBtn" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="AddBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="ViewBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jToggleButton1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="AddProductLbl" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ProductTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="TypeComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -155,9 +168,9 @@
                   <Component id="StudTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="StudComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Component id="AddProductBtn" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -374,6 +387,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="logoutBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Logout"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logoutBtnActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
