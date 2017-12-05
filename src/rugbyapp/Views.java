@@ -9,36 +9,31 @@ package rugbyapp;
  *
  * @author x15047911
  */
+
+
 public class Views {
     
-    // Views
     LoginGUI loginGUI = new LoginGUI(this);
     AddProductGUI addProductGUI = new AddProductGUI(this);
     ViewProductsGUI viewProductsGUI = new ViewProductsGUI(this);
     
-    public Views() {
+    
+    public void render(String viewName) {
+        
         loginGUI.setVisible(false);
         addProductGUI.setVisible(false);
         viewProductsGUI.setVisible(false);
-    }
-    
-    public void render(String viewName) {
-        switch(viewName) {
+        
+        switch(viewName.toLowerCase()) {
             case "login" :
                loginGUI.setVisible(true);
-               addProductGUI.setVisible(false);
-               viewProductsGUI.setVisible(false);
                break; 
 
-            case "addProduct" :
-               loginGUI.setVisible(false);
-               addProductGUI.setVisible(true);
-               viewProductsGUI.setVisible(false);
+            case "addproduct" :
+                addProductGUI.setVisible(true);
                break;
             
-            case "viewProduct" :
-                loginGUI.setVisible(false);
-                addProductGUI.setVisible(false);
+            case "viewproduct" :
                 viewProductsGUI.setVisible(true);
             break;
             
