@@ -12,12 +12,18 @@ package rugbyapp;
 public class UsersGUI extends javax.swing.JFrame {
 
     private Views view;
+    private String username;
+    private String password;
+    private String delete;
     /**
      * Creates new form UsersGUI
      */
     public UsersGUI(Views view) {
         initComponents();
         this.view=view;
+        username="";
+        password="";
+        delete="";
     }
 
     /**
@@ -59,6 +65,11 @@ public class UsersGUI extends javax.swing.JFrame {
         PasswordLabel.setText("Password :");
 
         CreateUserBtn.setText("Create User");
+        CreateUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CreateUserBtnActionPerformed(evt);
+            }
+        });
 
         DeleteUseLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         DeleteUseLabel.setText("Delete User");
@@ -67,6 +78,11 @@ public class UsersGUI extends javax.swing.JFrame {
         DeleteUsernameLable.setText("Username");
 
         DeletUserBtn.setText("Delete User");
+        DeletUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeletUserBtnActionPerformed(evt);
+            }
+        });
 
         addProductBtn.setText("Add Products");
         addProductBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -171,6 +187,27 @@ public class UsersGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         view.render("addProduct");
     }//GEN-LAST:event_addProductBtnActionPerformed
+
+    private void CreateUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateUserBtnActionPerformed
+        // TODO add your handling code here:
+        if(createUserTf.getText().equals("")||(PasswordTf.getText().equals(""))){
+            DialogBox.alert("One of the input feild is empty");
+        }
+        else{
+            username=createUserTf.getText();
+            password=PasswordTf.getText();
+        }
+    }//GEN-LAST:event_CreateUserBtnActionPerformed
+
+    private void DeletUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeletUserBtnActionPerformed
+        // TODO add your handling code here:
+        if(DeleteUserTf.getText().equals("")){
+            DialogBox.alert("feild is empty");
+        }
+        else{
+            delete=DeleteUserTf.getText();
+        }
+    }//GEN-LAST:event_DeletUserBtnActionPerformed
 
     /**
      * @param args the command line arguments
