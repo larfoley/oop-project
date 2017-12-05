@@ -43,6 +43,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         textPaneAsh = new javax.swing.JTextPane();
         UserBtn = new javax.swing.JToggleButton();
+        DeleteProductBtn = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,6 +89,13 @@ public class ViewProductsGUI extends javax.swing.JFrame {
             }
         });
 
+        DeleteProductBtn.setText("Delete Product");
+        DeleteProductBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteProductBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -98,26 +106,29 @@ public class ViewProductsGUI extends javax.swing.JFrame {
                         .addGap(68, 68, 68)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(185, 185, 185)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(UserBtn)
-                            .addComponent(viewProductsLabel))))
-                .addContainerGap(102, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(productsTypeLabel)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(75, 75, 75)
-                            .addComponent(viewProductsGetListButton))
-                        .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(addProductsChangePageButton)
-                        .addGap(131, 131, 131)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(viewProductsChangePageButton)
-                .addGap(74, 74, 74))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(viewProductsLabel)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(UserBtn)
+                                .addGap(18, 18, 18)
+                                .addComponent(viewProductsChangePageButton)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                                .addComponent(DeleteProductBtn))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(productsTypeLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(75, 75, 75)
+                                .addComponent(viewProductsGetListButton))
+                            .addComponent(productsTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +137,8 @@ public class ViewProductsGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addProductsChangePageButton)
                     .addComponent(viewProductsChangePageButton)
-                    .addComponent(UserBtn))
+                    .addComponent(UserBtn)
+                    .addComponent(DeleteProductBtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(viewProductsLabel)
                 .addGap(18, 18, 18)
@@ -234,6 +246,12 @@ public class ViewProductsGUI extends javax.swing.JFrame {
         view.render("viewProducts");
     }//GEN-LAST:event_viewProductsChangePageButtonActionPerformed
 
+    private void DeleteProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteProductBtnActionPerformed
+        // TODO add your handling code here:
+                view.render("delete");
+
+    }//GEN-LAST:event_DeleteProductBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -274,6 +292,7 @@ public class ViewProductsGUI extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton DeleteProductBtn;
     private javax.swing.JToggleButton UserBtn;
     private javax.swing.JButton addProductsChangePageButton;
     private javax.swing.JScrollPane jScrollPane2;
