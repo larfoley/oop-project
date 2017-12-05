@@ -16,12 +16,14 @@ public class Views {
     AddProductGUI addProductGUI = new AddProductGUI(this);
     ViewProductsGUI viewProductsGUI = new ViewProductsGUI(this);
     UsersGUI users=new UsersGUI(this);
+    DeleteForm delete = new DeleteForm(this);
     
     public Views() {
         loginGUI.setVisible(false);
         addProductGUI.setVisible(false);
         viewProductsGUI.setVisible(false);
         users.setVisible(false);
+        delete.setVisible(false);
     }
     
     public void render(String viewName) {
@@ -31,6 +33,7 @@ public class Views {
                addProductGUI.setVisible(false);
                viewProductsGUI.setVisible(false);
                users.setVisible(false);
+               delete.setVisible(false);
                break; 
 
             case "addProduct" :
@@ -38,6 +41,7 @@ public class Views {
                addProductGUI.setVisible(true);
                viewProductsGUI.setVisible(false);
                users.setVisible(false);
+               delete.setVisible(false);
                break;
             
             case "viewProduct" :
@@ -45,6 +49,7 @@ public class Views {
                 addProductGUI.setVisible(false);
                 viewProductsGUI.setVisible(true);
                 users.setVisible(false);
+                delete.setVisible(false);
             break;
             
             case "users" :
@@ -52,8 +57,15 @@ public class Views {
                 addProductGUI.setVisible(false);
                 viewProductsGUI.setVisible(false);
                 users.setVisible(true);
+                delete.setVisible(false);
             break;
-            
+                        case "delete" :
+                loginGUI.setVisible(false);
+                addProductGUI.setVisible(false);
+                viewProductsGUI.setVisible(false);
+                users.setVisible(false);
+                delete.setVisible(true);
+            break;
             default :
                throw new Error("Wrong Filed name");
          }
